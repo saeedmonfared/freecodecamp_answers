@@ -1,0 +1,37 @@
+// <  &lt;
+// >  &gt;
+// "  &quot;
+// '  &apos;
+// &  &amp;
+
+const convertHTML = (str) => {
+  let result = str.split('').map(x =>{
+    let he = x
+    switch(x){
+      case '"' :{
+        he = "&quot;"
+        break
+      }
+      case "'" :{
+        he = "&apos;"
+        break
+      }
+      case '&' :{
+        he = "&amp;"
+        break
+      }
+      case '>' :{
+        he = "&gt;"
+        break
+      }
+      case '<' :{
+        he = "&lt;"
+        break
+      }
+    }
+    return he
+  })
+  return result.join('')
+}
+
+convertHTML("Dolce & Gabbana");
