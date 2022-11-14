@@ -1,0 +1,18 @@
+const sumPrimes = (num) => {
+  let sum = 0
+  let i = 2
+  while (i <= num){
+    let flag = 0
+    for(let j=2; j< i ; j++){
+      if(i % j == 0){
+        flag =1
+        break
+      }
+    }
+    if(flag == 0){
+      sum += i
+    }
+    i++
+  }
+  return sum
+}
