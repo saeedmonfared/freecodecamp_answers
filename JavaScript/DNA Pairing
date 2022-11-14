@@ -1,1 +1,11 @@
-salam
+const pairElement = (str) => {
+  var dna = str.split('').map(x =>{
+    if(x === "A") return ["A", "T"]
+    else if (x === "T") return ["T", "A"]
+    else if (x === "G") return ["G", "C"]
+    else return ["C", "G"]
+  })
+  return dna
+}
+
+pairElement("GCG");
