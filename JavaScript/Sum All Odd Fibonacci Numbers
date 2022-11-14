@@ -1,0 +1,14 @@
+const sumFibs = (num) => {
+  var result = 1
+  let i = 1
+  let j = 1
+  while(j <= num){
+    if(j % 2 == 1) result += j
+    let temp = j
+    j = i + j
+    i = temp
+  }
+  return result
+}
+
+sumFibs(4);
